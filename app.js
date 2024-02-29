@@ -9,7 +9,7 @@ const llavesVocales = {
 
 //Función para encriptar el texto del usuario
 //Se recibe el texto como párametro
-function encriptacion(texto) {
+function encriptarTexto(texto) {
     //Variable para concatenar el texto resultante
     let ResultText = '';
     
@@ -32,7 +32,7 @@ function encriptacion(texto) {
 
 //Función para encriptar el texto del usuario
 //Se recibe el texto como párametro
-function desencriptar(texto) {
+function desencriptarTexto(texto) {
 
     //Variable donde se almacena la desencriptacion de cada vocal y el texto resultante
     let ResultText = texto;
