@@ -30,21 +30,23 @@ function encriptacion(texto) {
     return ResultText;
 }
 
-
+//Función para encriptar el texto del usuario
+//Se recibe el texto como párametro
 function desencriptar(texto) {
 
+    //Variable donde se almacena la desencriptacion de cada vocal y el texto resultante
     let ResultText = texto;
 
+    //Recorre cada vocal en el objeto
     for(let clave in llavesVocales){
-          
+        
+        //Divide el texto en partes utilizando el valor de la clave actual como separador
         const TEXT_SEPARADO = ResultText.split(llavesVocales[clave]);
+        //Une las partes del texto utilizando la clave actual como unión
         ResultText = TEXT_SEPARADO.join(clave);
 
-        /*
-        Nota: un metodo encontrado en la documentacion a considerar
-        ResultText = ResultText.replaceAll(llavesVocales[clave], clave);*/
     }
 
-    
+    //Se retorna el texto desencriptado
     return ResultText;
 }
