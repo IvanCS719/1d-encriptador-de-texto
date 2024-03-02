@@ -62,13 +62,28 @@ function desencriptarTexto(texto) {
 }
 
 //Funcion para procesar la encriptación
-function ProcesarEncriptacion() {
+function procesarEncriptacion() {
     
     //Se valida el texto ingresado
     if (REGEXP_VALIDADOR.test(INPUT_TEXTO.value)){
         /*Si es verdadero se llama a la función para ecriptar el texto
           y se inserta el rultado en el elemento html*/
         TEXTO_RESULTADO.innerText = encriptarTexto(INPUT_TEXTO.value);
+
+    }else{
+        //Si es falso, se muestra un alert informativo
+        alert("Solo se aceptan letras minúsculas y sin acentos.");
+
+    }
+}
+
+//Funcion para procesar la desencriptación
+function procesarDesencriptacion() {
+    //Se valida el texto ingresado
+    if (REGEXP_VALIDADOR.test(INPUT_TEXTO.value)){
+        /*Si es verdadero se llama a la función para ecriptar el texto
+          y se inserta el rultado en el elemento html*/
+        TEXTO_RESULTADO.innerText = desencriptarTexto(INPUT_TEXTO.value);
 
     }else{
         //Si es falso, se muestra un alert informativo
