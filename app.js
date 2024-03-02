@@ -4,6 +4,8 @@ const INPUT_TEXTO = document.getElementById('idInputTexto');
 //Elemento para mostrar el resultado de la encriptación o desencriptación
 const TEXTO_RESULTADO = document.getElementById('TextoResultado');
 
+const BTN_COPIAR = document.getElementById('btnCopiar');
+
 //Validar que el texto introducido no tenga mayúsculas y tíldes
 //Pero se aceptan otros caracteres especiales
 const REGEXP_VALIDADOR = /^[a-z ¡!@#$%^&*()_+{}\[\]:;<>,.¿?'"~\\\/\-]*$/;
@@ -69,6 +71,7 @@ function procesarEncriptacion() {
         /*Si es verdadero se llama a la función para ecriptar el texto
           y se inserta el rultado en el elemento html*/
         TEXTO_RESULTADO.innerText = encriptarTexto(INPUT_TEXTO.value);
+        cambiarTextoBtnCopiar("Copiar Texto");
 
     } else {
         //Si es falso, se muestra un alert informativo
@@ -84,6 +87,7 @@ function procesarDesencriptacion() {
         /*Si es verdadero se llama a la función para ecriptar el texto
           y se inserta el rultado en el elemento html*/
         TEXTO_RESULTADO.innerText = desencriptarTexto(INPUT_TEXTO.value);
+        cambiarTextoBtnCopiar("Copiar Texto");
 
     } else {
         //Si es falso, se muestra un alert informativo
@@ -102,8 +106,14 @@ function copiarResultado() {
 
             if (permissionStatus.state === 'granted') {
                 // El usuario ha concedido permiso para utilizar navigator.clipboard.writeText()
-                //Copiar el texto resultante al clipboard
-                navigator.clipboard.writeText(TEXTO_RESULTADO.textContent);
+                try {
+                    //Copiar el texto resultante al clipboard
+                    navigator.clipboard.writeText(TEXTO_RESULTADO.textContent);
+                    cambiarTextoBtnCopiar("¡Texto Copiado!");
+                } catch (error) {
+                    alert("Ha ocurrido un error al copiar el texto");
+                }
+                
             } else if (permissionStatus.state === 'prompt') {
                 // El usuario aún no ha concedido el permiso para utilizar navigator.clipboard.writeText()
                 alert('Para copiar el texto al portapapeles, necesitamos tu autorización. Por favor, haz clic en "Aceptar" para permitirlo.');
@@ -111,10 +121,15 @@ function copiarResultado() {
                 // El usuario ha denegado el permiso para utilizar navigator.clipboard.writeText()
                 alert('No se ha concedido permiso para acceder al portapapeles. Para copiar el texto, por favor revisa la configuración de tu navegador.');
             }
-            
+
         });
 
     } else {
         alert('Su navegador no soporta la API navigator.clipboard.writeText()');
     }
+}
+
+//Función para cambiar el texto del botón copiar
+function cambiarTextoBtnCopiar(texto) {
+    BTN_COPIAR.innerText = texto;
 }
