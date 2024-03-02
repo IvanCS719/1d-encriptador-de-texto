@@ -8,7 +8,7 @@ const BTN_COPIAR = document.getElementById('btnCopiar');
 
 //Validar que el texto introducido no tenga mayúsculas y tíldes
 //Pero se aceptan otros caracteres especiales
-const REGEXP_VALIDADOR = /^[a-z ¡!@#$%^&*()_+{}\[\]:;<>,.¿?'"~\\\/\-]*$/;
+const REGEXP_VALIDADOR = /^[a-z 0-9¡!@#$%^&*()_+{}\[\]:;<>,.¿?'"~\\\/\-]*$/;
 
 //Creando un objeto con las vocales y su incritación
 const llavesVocales = {
