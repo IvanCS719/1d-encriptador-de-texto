@@ -1,3 +1,13 @@
+//Conectando mediante DOM los elementos html con javascript
+//Elemento para escribir el texto
+const INPUT_TEXTO = document.getElementById('idInputTexto');
+//Elemento para mostrar el resultado de la encriptación o desencriptación
+const TEXTO_RESULTADO = document.getElementById('TextoResultado');
+
+//Validar que el texto introducido no tenga mayúsculas y tíldes
+//Pero se aceptan otros caracteres especiales
+const REGEXP_VALIDADOR = /^[a-z ¡!@#$%^&*()_+{}\[\]:;<>,.¿?'"~\\\/\-]*$/;
+
 //Creando un objeto con las vocales y su incritación
 const llavesVocales = {
     'e' : "enter",
@@ -49,4 +59,20 @@ function desencriptarTexto(texto) {
 
     //Se retorna el texto desencriptado
     return ResultText;
+}
+
+//Funcion para procesar la encriptación
+function ProcesarEncriptacion() {
+    
+    //Se valida el texto ingresado
+    if (REGEXP_VALIDADOR.test(INPUT_TEXTO.value)){
+        /*Si es verdadero se llama a la función para ecriptar el texto
+          y se inserta el rultado en el elemento html*/
+        TEXTO_RESULTADO.innerText = encriptarTexto(INPUT_TEXTO.value);
+
+    }else{
+        //Si es falso, se muestra un alert informativo
+        alert("Solo se aceptan letras minúsculas y sin acentos.");
+
+    }
 }
