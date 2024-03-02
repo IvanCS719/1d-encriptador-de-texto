@@ -42,7 +42,7 @@ function encriptarTexto(texto) {
     return ResultText;
 }
 
-//Función para encriptar el texto del usuario
+//Función para desencriptar el texto del usuario
 //Se recibe el texto como párametro
 function desencriptarTexto(texto) {
 
@@ -52,9 +52,9 @@ function desencriptarTexto(texto) {
     //Recorre cada vocal en el objeto
     for (let clave in llavesVocales) {
 
-        //Divide el texto en partes utilizando el valor de la clave actual como separador
+        //Divide el texto en partes utilizando el valor de la clave (vocal) actual como separador
         const TEXT_SEPARADO = ResultText.split(llavesVocales[clave]);
-        //Une las partes del texto utilizando la clave actual como unión
+        //Une las partes del texto utilizando la clave (vocal) actual como unión
         ResultText = TEXT_SEPARADO.join(clave);
 
     }
@@ -65,6 +65,11 @@ function desencriptarTexto(texto) {
 
 //Funcion para procesar la encriptación
 function procesarEncriptacion() {
+    //Validar que el campo del texto no este vacio
+    if(INPUT_TEXTO.value == ""){
+        alert("El campo no puede estar vacío.");
+        return;
+    }
 
     //Se valida el texto ingresado
     if (REGEXP_VALIDADOR.test(INPUT_TEXTO.value)) {
@@ -82,6 +87,11 @@ function procesarEncriptacion() {
 
 //Funcion para procesar la desencriptación
 function procesarDesencriptacion() {
+    //Validar que el campo del texto no este vacio
+    if(INPUT_TEXTO.value == ""){
+        alert("El campo no puede estar vacío.");
+        return;
+    }
     //Se valida el texto ingresado
     if (REGEXP_VALIDADOR.test(INPUT_TEXTO.value)) {
         /*Si es verdadero se llama a la función para ecriptar el texto
