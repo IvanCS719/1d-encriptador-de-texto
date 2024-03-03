@@ -1,0 +1,9 @@
+/* header */
+.header{
+    background-color: aqua;
+    padding: 20px 30px 10px 30px;
+}
+
+.header-logo{
+    height: 48px;
+}
