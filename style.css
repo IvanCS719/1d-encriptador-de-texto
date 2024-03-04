@@ -63,3 +63,16 @@ html,body {
     font-weight: 400;
     padding: 0 25px;
 }
+
+.contenedor-output-TextoResultado{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: center;
+}
+.TextoResultado{
+    overflow: auto;
+    font-size: 24px;
+}
