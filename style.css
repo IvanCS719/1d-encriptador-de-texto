@@ -19,7 +19,7 @@ html,body {
     max-width: 1440px;
     display: flex;
     flex-grow: 1;
-    min-height: 536px;
+    min-height: 496px;
     max-height: 945px;
     padding: 10px 30px 10px 30px;
     gap: 15px;
@@ -31,6 +31,34 @@ html,body {
 }
 
 .contenedor-output{
-    width: 400px;
+    width: 360px;
     background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.contenedor-output-TextoNoEncontrado{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.img-textoNoEncontrado{
+    max-width: 335px;
+}
+
+.titulo-textoNoEncontrado{
+    font-size: 24px;
+    font-weight: 700;
+    padding: 0 25px;
+}
+
+.mensaje-textoNoEncontrado{
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 25px;
 }
