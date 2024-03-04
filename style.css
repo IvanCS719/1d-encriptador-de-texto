@@ -1,15 +1,36 @@
+html,body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 /* header */
 .header{
     background-color: aqua;
     padding: 20px 30px 10px 30px;
+    max-width: 1440px;
 }
 
 .header-logo{
-    height: 48px;
+    height: 40px;
 }
 
 /* main */
 .main{
+    max-width: 1440px;
     display: flex;
+    flex-grow: 1;
+    min-height: 536px;
+    max-height: 945px;
     padding: 10px 30px 10px 30px;
+    gap: 15px;
+}
+
+.contenedor-input{
+    background-color: blue;
+    flex-grow: 1;
+}
+
+.contenedor-output{
+    width: 400px;
+    background-color: brown;
 }
