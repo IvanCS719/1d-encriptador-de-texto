@@ -81,6 +81,7 @@ html,body {
 }
 
 .btnCopiar{
+    background-color: #ffffff;
     border: 1px solid #0A3871;
     color: #0A3871;
     font-size: 16px;
