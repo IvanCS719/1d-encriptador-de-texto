@@ -6,6 +6,9 @@ const TEXTO_RESULTADO = document.getElementById('TextoResultado');
 
 const BTN_COPIAR = document.getElementById('btnCopiar');
 
+const CONTE_TEXTO_NO_ENCONTRADO = document.querySelector('.contenedor-output-TextoNoEncontrado');
+const CONTE_TEXTO_RESULTADO = document.querySelector('.contenedor-output-TextoResultado');
+
 //Validar que el texto introducido no tenga mayúsculas y tíldes
 //Pero se aceptan otros caracteres especiales
 const REGEXP_VALIDADOR = /^[a-z 0-9¡!@#$%^&*()_+{}\[\]:;<>,.¿?'"~\\\/\-]*$/;
@@ -71,6 +74,9 @@ function procesarEncriptacion() {
         return;
     }
 
+    CONTE_TEXTO_NO_ENCONTRADO.classList.add('display');
+    CONTE_TEXTO_RESULTADO.classList.remove('display');
+
     //Se valida el texto ingresado
     if (REGEXP_VALIDADOR.test(INPUT_TEXTO.value)) {
         /*Si es verdadero se llama a la función para ecriptar el texto
@@ -92,6 +98,10 @@ function procesarDesencriptacion() {
         alert("El campo no puede estar vacío.");
         return;
     }
+
+    CONTE_TEXTO_NO_ENCONTRADO.classList.add('display');
+    CONTE_TEXTO_RESULTADO.classList.remove('display');
+    
     //Se valida el texto ingresado
     if (REGEXP_VALIDADOR.test(INPUT_TEXTO.value)) {
         /*Si es verdadero se llama a la función para ecriptar el texto
