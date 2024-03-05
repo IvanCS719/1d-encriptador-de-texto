@@ -28,17 +28,18 @@ html,body {
 .contenedor-input{
     background-color: blue;
     flex-grow: 1;
+    padding: 30px;
 }
 
 .contenedor-output{
-    width: 360px;
+    width: 340px;
     background-color: #ffffff;
     box-shadow: 5px 10px 20px 0px rgba(0,0,0,0.1);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 24px;
-    padding: 20px;
+    padding: 30px;
 }
 
 .contenedor-output-TextoNoEncontrado{
@@ -78,6 +79,7 @@ html,body {
     color: #495057;
     overflow-y: auto;
     font-size: 24px;
+    line-height: 36px;
 }
 
 .btnCopiar{
