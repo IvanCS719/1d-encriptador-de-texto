@@ -26,7 +26,6 @@ html,body {
 }
 
 .contenedor-input{
-    background-color: blue;
     flex-grow: 1;
     padding: 30px;
     display: flex;
@@ -45,9 +44,43 @@ html,body {
     font-size: 32px;
     line-height: 38px;
     color: #0A3871;
+    background-color: transparent;
 }
 
 .idInputTexto::placeholder{
+    color: #0A3871;
+}
+
+.mensaje-advertencia{
+    width: 680px;
+    text-align: left;
+    color: #45565F;
+    font-size: 13px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.btnEncriptar, .btnDesencriptar{
+    width: 328px;
+    font-size: 16px;
+    font-weight: 400;
+    height: 67px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.btnEncriptar{
+    background-color: #0A3871;
+    border: none;
+    color: #ffffff;
+    margin-right: 24px;
+}
+
+.btnDesencriptar{
+    background-color: #ffffff;
+    border: 1px solid #0A3871;
     color: #0A3871;
 }
 

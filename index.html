@@ -16,18 +16,20 @@
     </header>
     <main class="main">
         <div class="contenedor-input">
-                <textarea id="idInputTexto" class="idInputTexto" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
-          
-            <p><img src="/assets/iconAdvertencia.svg" alt="Icono de advertencia">Solo letras minúsculas y sin acentos
+            <textarea id="idInputTexto" class="idInputTexto" cols="30" rows="10"
+                placeholder="Ingrese el texto aqui"></textarea>
+
+            <p class="mensaje-advertencia"><img src="/assets/iconAdvertencia.svg" alt="Icono de advertencia"> Solo letras minúsculas y sin acentos
             </p>
             <div class="contenedor-input-botones">
-                <button onclick="procesarEncriptacion();">Encriptar</button>
-                <button onclick="procesarDesencriptacion();">Desencriptar</button>
+                <button class="btnEncriptar" onclick="procesarEncriptacion();">Encriptar</button>
+                <button class="btnDesencriptar" onclick="procesarDesencriptacion();">Desencriptar</button>
             </div>
         </div>
         <div class="contenedor-output">
             <div class="contenedor-output-TextoNoEncontrado">
-                <img class="img-textoNoEncontrado" src="assets/personaConLupa.svg" alt="Personaje buscando con una lupa">
+                <img class="img-textoNoEncontrado" src="assets/personaConLupa.svg"
+                    alt="Personaje buscando con una lupa">
                 <h3 class="titulo-textoNoEncontrado">Ningún mensaje fue encontrado</h3>
                 <p class="mensaje-textoNoEncontrado">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
