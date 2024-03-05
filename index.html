@@ -16,7 +16,9 @@
     </header>
     <main class="main">
         <div class="contenedor-input">
-            <textarea id="idInputTexto" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            <div class="contenedor-input-textArea">
+                <textarea id="idInputTexto" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            </div>
             <p><img src="/assets/iconAdvertencia.svg" alt="Icono de advertencia">Solo letras minúsculas y sin acentos
             </p>
             <div class="contenedor-input-botones">
@@ -25,15 +27,15 @@
             </div>
         </div>
         <div class="contenedor-output">
-            <!-- <div class="contenedor-output-TextoNoEncontrado">
+            <div class="contenedor-output-TextoNoEncontrado">
                 <img class="img-textoNoEncontrado" src="assets/personaConLupa.svg" alt="Personaje buscando con una lupa">
                 <h3 class="titulo-textoNoEncontrado">Ningún mensaje fue encontrado</h3>
                 <p class="mensaje-textoNoEncontrado">Ingresa el texto que desees encriptar o desencriptar.</p>
-            </div> -->
-            <div class="contenedor-output-TextoResultado">
+            </div>
+            <!-- <div class="contenedor-output-TextoResultado">
                 <p id="TextoResultado" class="TextoResultado">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</p>
                 <button id="btnCopiar" class="btnCopiar" onclick="copiarResultado();">Copiar Texto</button>
-            </div>
+            </div> -->
         </div>
     </main>
     <script src="app.js"></script>
