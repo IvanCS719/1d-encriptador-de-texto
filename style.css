@@ -38,8 +38,17 @@ html,body {
 
 .idInputTexto{
     height: 100%;
-    width: 80%;
+    width: 680px;
     resize: none;
+    outline: none;
+    border: none;
+    font-size: 32px;
+    line-height: 38px;
+    color: #0A3871;
+}
+
+.idInputTexto::placeholder{
+    color: #0A3871;
 }
 
 .contenedor-output{
