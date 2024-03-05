@@ -29,6 +29,17 @@ html,body {
     background-color: blue;
     flex-grow: 1;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.idInputTexto{
+    height: 100%;
+    width: 80%;
+    resize: none;
 }
 
 .contenedor-output{
