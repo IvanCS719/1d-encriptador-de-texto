@@ -1,20 +1,20 @@
-html,body {
+/* html,body {
     height: 100%;
     display: flex;
     flex-direction: column;
     background-color: #F3F5FC;
 }
-/* header */
+/* header
 .header{
     padding: 20px 30px 10px 30px;
     max-width: 1440px;
 }
 
 .header-logo{
-    height: 40px;
+    height: 48px;
 }
 
-/* main */
+/* main
 .main{
     max-width: 1440px;
     display: flex;
@@ -143,8 +143,135 @@ html,body {
     font-weight: 400;
     height: 67px;
     border-radius: 24px;
+} */
+
+.display {
+    display: none;
 }
 
-.display{
-    display: none;
+
+/* Resposive Tablet */
+@media screen and (min-width: 768px) {
+
+    .header {
+        padding: 60px 32px 28px 32px;
+    }
+
+    .main {
+        padding: 32px;
+    }
+
+    .idInputTexto {
+        height: 670px;
+        width: 688px;
+        resize: none;
+        outline: none;
+        border: none;
+        font-size: 32px;
+        line-height: 38px;
+        color: #0A3871;
+        background-color: transparent;
+    }
+
+    .mensaje-advertencia {
+        width: 100%;
+        text-align: left;
+    }
+
+    .contenedor-input-botones {
+        width: 100%;
+        display: flex;
+        gap: 24px;
+    }
+
+    .btnEncriptar,
+    .btnDesencriptar {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+        height: 67px;
+        border-radius: 24px;
+        cursor: pointer;
+    }
+
+    .btnEncriptar {
+        background-color: #0A3871;
+        border: none;
+        color: #ffffff;
+    }
+
+    .btnDesencriptar {
+        background-color: #ffffff;
+        border: 1px solid #0A3871;
+        color: #0A3871;
+    }
+
+    .contenedor-output {
+        width: 100%;
+        min-height: 133px;
+        background-color: #ffffff;
+        box-shadow: 5px 10px 20px 0px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 24px;
+        margin-top: 48px;
+    }
+
+    .contenedor-output-TextoNoEncontrado {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+
+    .titulo-textoNoEncontrado {
+        font-size: 24px;
+        font-weight: 700;
+        padding: 25px 25px 0 25px;
+    }
+
+    .mensaje-textoNoEncontrado {
+        font-size: 16px;
+        font-weight: 400;
+        padding: 25px 25px 0 25px;
+    }
+
+    .contenedor-output-TextoResultado {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .TextoResultado {
+        height: 100%;
+        color: #495057;
+        overflow-y: auto;
+        font-size: 24px;
+        line-height: 36px;
+        padding: 25px 25px 0 25px;
+    }
+
+    .btnCopiar {
+        background-color: #ffffff;
+        border: 1px solid #0A3871;
+        color: #0A3871;
+        font-size: 16px;
+        font-weight: 400;
+        height: 67px;
+        border-radius: 24px;
+        margin: 0px 25px 25px 25px;
+    }
+
+    .img-textoNoEncontrado {
+        display: none;
+    }
+
+    .display {
+        display: none;
+    }
 }
