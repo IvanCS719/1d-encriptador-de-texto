@@ -312,3 +312,67 @@ body {
     }
 
 }
+
+/* Resposive Escritorio */
+@media screen and (min-width: 1280px) {
+    html{
+        height: 100%;
+    }
+    body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #F3F5FC;
+    }
+    .header{
+        background-color: blueviolet;
+        padding: 32px 60px 10px 60px ;
+    }
+    .main {
+        max-width: 1440px;
+        flex-grow: 1;
+        min-height: 496px;
+        max-height: 945px;
+        background-color: cadetblue;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 32px;
+
+    }
+
+    .contenedor-input {
+        flex-grow: 1;
+        height: 100%;
+    }
+
+    .idInputTexto{
+        height: 100%;
+        width: 680px;
+    }
+
+    .mensaje-advertencia {
+        width: 680px;
+        text-align: left;
+    }
+
+    .contenedor-input-botones{
+        justify-content: center;
+    }
+    
+    .btnEncriptar, .btnDesencriptar{
+       max-width: 328px;
+    }
+
+    .contenedor-output{
+        width: 400px;
+        height: 100%;
+        margin-top: 0;
+    }
+
+    .img-textoNoEncontrado {
+        display: block;
+        width: 335px;
+        margin: auto;
+    }
+}
