@@ -43,6 +43,7 @@ body {
 .mensaje-advertencia {
     width: 100%;
     text-align: left;
+    color: #495057;
 }
 
 .contenedor-input-botones {
@@ -97,12 +98,14 @@ body {
     font-size: 24px;
     font-weight: 700;
     padding: 0 57px;
+    color: #343A40;
 }
 
 .mensaje-textoNoEncontrado {
     font-size: 16px;
     font-weight: 400;
     padding: 0 57px;
+    color: #495057;
 }
 
 .img-textoNoEncontrado {
