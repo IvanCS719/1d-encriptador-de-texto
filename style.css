@@ -325,7 +325,6 @@ body {
         background-color: #F3F5FC;
     }
     .header{
-        background-color: blueviolet;
         padding: 32px 60px 10px 60px ;
     }
     .main {
@@ -333,7 +332,6 @@ body {
         flex-grow: 1;
         min-height: 496px;
         max-height: 945px;
-        background-color: cadetblue;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -373,6 +371,13 @@ body {
     .img-textoNoEncontrado {
         display: block;
         width: 335px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1505px) {
+    .main{
+        width: 1440px;
         margin: auto;
     }
 }
