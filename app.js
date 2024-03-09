@@ -11,7 +11,7 @@ const CONTE_TEXTO_RESULTADO = document.querySelector('.contenedor-output-TextoRe
 
 //Validar que el texto introducido no tenga mayúsculas y tíldes
 //Pero se aceptan otros caracteres especiales
-const REGEXP_VALIDADOR = /^[a-z 0-9¡!@#$%^&*()_+{}\[\]:;<>,.¿?'"~\\\/\-]*$/;
+const REGEXP_VALIDADOR = /^[a-zü 0-9¡!@#$%^&*()_+{}\[\]:;<>,.¿?'"~\\\/\-\n]*$/;
 
 //Creando un objeto con las vocales y su incritación
 const llavesVocales = {
