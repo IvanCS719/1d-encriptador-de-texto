@@ -4,8 +4,10 @@ const INPUT_TEXTO = document.getElementById('idInputTexto');
 //Elemento para mostrar el resultado de la encriptación o desencriptación
 const TEXTO_RESULTADO = document.getElementById('TextoResultado');
 
+//Elemento para cambiar el texto del botón copiar
 const BTN_COPIAR = document.getElementById('btnCopiar');
 
+//Elementos para modificar la visibilidad de los elementos hijo del contendor output
 const CONTE_TEXTO_NO_ENCONTRADO = document.querySelector('.contenedor-output-TextoNoEncontrado');
 const CONTE_TEXTO_RESULTADO = document.querySelector('.contenedor-output-TextoResultado');
 
@@ -25,19 +27,16 @@ const llavesVocales = {
 //Función para encriptar el texto del usuario
 //Se recibe el texto como párametro
 function encriptarTexto(texto) {
-    //Variable para concatenar el texto resultante
-    let ResultText = '';
+    //Variable donde se almacena la encriptación de cada vocal y el texto resultante
+    let ResultText = texto;
 
-    //Se recorre el texto como un arreglo
-    for (let i = 0; i < texto.length; i++) {
-        //Se extrae cada caracter del texto
-        const letra = texto[i];
+    //Recorre cada vocal en el objeto
+    for (let clave in llavesVocales) {
 
-        /**Si el caracter es alguna clave del objeto llavesVocales
-         * se obtine su valor y se concatena al resulText, en caso contrario
-         * se contena el mismo caracter del texto recorrido.
-        */
-        ResultText += llavesVocales[letra] || letra;
+        //Divide el texto en partes utilizando la clave (vocal) actual como separador
+        const TEXT_SEPARADO = ResultText.split(clave);
+        //Une las partes del texto utilizando el valor de la clave (vocal) actual como unión
+        ResultText = TEXT_SEPARADO.join(llavesVocales[clave]);
 
     }
 
@@ -74,6 +73,7 @@ function procesarEncriptacion() {
         return;
     }
 
+    //Modificando visibilidad de los elementos hijos del contenedor output
     CONTE_TEXTO_NO_ENCONTRADO.classList.add('display');
     CONTE_TEXTO_RESULTADO.classList.remove('display');
 
@@ -99,6 +99,7 @@ function procesarDesencriptacion() {
         return;
     }
 
+    //Modificando visibilidad de los elementos hijos del contenedor output
     CONTE_TEXTO_NO_ENCONTRADO.classList.add('display');
     CONTE_TEXTO_RESULTADO.classList.remove('display');
     
