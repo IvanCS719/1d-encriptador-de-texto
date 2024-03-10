@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon">
     <title>Encriptador de texto Alura</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
@@ -12,14 +13,14 @@
 
 <body>
     <header class="header">
-        <img class="header-logo" src="assets/logo.svg" alt="">
+        <img class="header-logo" src="./assets/logo.svg" alt="">
     </header>
     <main class="main">
         <div class="contenedor-input">
             <textarea id="idInputTexto" class="idInputTexto" cols="30" rows="10"
                 placeholder="Ingrese el texto aqui"></textarea>
 
-            <p class="mensaje-advertencia"><img src="/assets/iconAdvertencia.svg" alt="Icono de advertencia"> Solo letras minúsculas y sin acentos
+            <p class="mensaje-advertencia"><img src="./assets/iconAdvertencia.svg" alt="Icono de advertencia"> Solo letras minúsculas y sin acentos
             </p>
             <div class="contenedor-input-botones">
                 <button class="btnEncriptar" onclick="procesarEncriptacion();">Encriptar</button>
@@ -28,7 +29,7 @@
         </div>
         <div class="contenedor-output">
             <div class="contenedor-output-TextoNoEncontrado">
-                <img class="img-textoNoEncontrado" src="assets/personaConLupa.svg"
+                <img class="img-textoNoEncontrado" src="./assets/personaConLupa.svg"
                     alt="Personaje buscando con una lupa">
                 <h3 class="titulo-textoNoEncontrado">Ningún mensaje fue encontrado</h3>
                 <p class="mensaje-textoNoEncontrado">Ingresa el texto que desees encriptar o desencriptar.</p>
