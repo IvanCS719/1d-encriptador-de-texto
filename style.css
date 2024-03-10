@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body{
     font-family: "Roboto", sans-serif;
 }
+
 .display {
     display: none;
 }
@@ -145,6 +148,27 @@ body {
     display: none;
 }
 
+.footer{
+    background-color: #0A3871;
+    padding: 20px;
+}
+
+.info-alura, .info-dev{
+    text-align: center;
+    color: #ffffff;
+}
+.info-dev{
+    margin-top: 10px;
+}
+
+.info-alura a, .info-dev a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+.info-alura a:hover, .info-dev a:hover{
+    text-decoration: underline;
+}
 /* Resposive Tablet */
 @media screen and (min-width: 768px) {
 
